@@ -1,1 +1,42 @@
 <!DOCTYPE html>
+<html lang "en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Budget Tracker</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    
+    <body>
+        <div class="container">
+            <header>
+                <h1>Budget Tracker</h1>
+            </header>
+    <main>
+
+        <section class="status">
+                <h2>Status: <span id="status">0.00 EUR</span></h2>
+        </section>
+
+        <section class="transactions">
+            <h3>Transactions</h3>
+            <ul id="transaction-list">
+
+
+            </ul>
+        </section>
+
+        <section class="add-transaction">
+            <h3>Add Transaction</h3>
+            <form id="transaction-form">
+                <input type="text" id="transanction-aim" placeholder="expenditure/income name" required>
+                <input type="number" id="amount" placeholder="(+income, -expense)" required>
+                <button type="submit">Add Transaction</button>
+            </form>
+        </section>
+
+    </main>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
