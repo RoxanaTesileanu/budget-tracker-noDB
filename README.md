@@ -1,0 +1,1 @@
+This is a learning app. I want to use HTML, CSS and JavaScript to build a small budget-tracker App. 
