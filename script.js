@@ -1,8 +1,8 @@
 const statusElement= document.getElementById("status");
 let transactionListElement = document.getElementById("transaction-list");
 const formElement= document.getElementById("transaction-form");
-const transactionElement = document.getElementById("transaction-aim");
-const amountElement= document.getElementById("amount");
+let transactionElement = document.getElementById("transaction-aim");
+let amountElement= document.getElementById("amount");
 
 let transactions= []; 
 
@@ -16,14 +16,6 @@ function updateStatus(){
         console.log(statusElement.textContent)
     }
        
-       /* transactions.forEach((inputs) => 
-        {const li = document.createElement('li');
-        li.textContent=inputs.transaction + " : ";
-        li.textContent += inputs.amount;
-        console.log(inputs.transaction)
-        console.log(inputs.amount)
-        transactionListElement.appendChild(li);}) */
-        
     }
     
 
@@ -35,12 +27,14 @@ const li= document.createElement('li');
 li.textContent=transaction+ " : "+amount;
 transactionListElement.appendChild(li);
     transactions.push({transaction,amount}); 
-
-   transaction='';
-   amount='';
     updateStatus();
-
+ transaction="";
+ amount="";
  }
+
+ 
+
+ 
 
 
 formElement.addEventListener('submit', addTransaction); //program starts if there is an event e
