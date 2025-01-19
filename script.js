@@ -16,31 +16,31 @@ function updateStatus(){
         console.log(statusElement.textContent)
     }
        
-        transactions.forEach((inputs) => 
+       /* transactions.forEach((inputs) => 
         {const li = document.createElement('li');
         li.textContent=inputs.transaction + " : ";
         li.textContent += inputs.amount;
         console.log(inputs.transaction)
         console.log(inputs.amount)
-        transactionListElement.appendChild(li);})
+        transactionListElement.appendChild(li);}) */
         
     }
     
 
 function addTransaction (e){
 e.preventDefault();
-const transaction = transactionElement.value;
-const amount = parseFloat(amountElement.value);
-
+let transaction = transactionElement.value;
+let amount = parseFloat(amountElement.value);
+const li= document.createElement('li');
+li.textContent=transaction+ " : "+amount;
+transactionListElement.appendChild(li);
     transactions.push({transaction,amount}); 
-   
+
+   transaction='';
+   amount='';
     updateStatus();
 
  }
-
-
-
-
 
 
 formElement.addEventListener('submit', addTransaction); //program starts if there is an event e
